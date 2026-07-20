@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>尋找您的座位</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>婚禮座位查詢</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="seat">查詢座位</button>
+      <button class="tab-btn" data-tab="tablemates">同桌賓客</button>
+    </div>
+
+    <div id="tab-seat" class="tab-panel active">
+      <p class="subtitle">輸入您的姓名以查詢桌次與座位</p>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="請輸入您的姓名..." autocomplete="off">
+      </div>
+      <div id="results" class="results"></div>
+      <p id="status" class="status"></p>
+    </div>
+
+    <div id="tab-tablemates" class="tab-panel">
+      <p class="subtitle">輸入您的姓名，查看同桌的其他賓客</p>
+      <div class="search-box">
+        <input type="text" id="tablemateInput" placeholder="請輸入您的姓名..." autocomplete="off">
+      </div>
+      <div id="tablemateResults" class="results"></div>
+      <p id="tablemateStatus" class="status"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
