@@ -76,7 +76,7 @@ function renderTablemates(matches) {
       item.className = 'result-item' + (isSelf ? ' self' : '');
       item.innerHTML = `
         <span class="result-name">${mate.name}${isSelf ? '（您）' : ''}</span>
-        <span class="result-seat">${mate.seat}${guest.table}</span>
+        <span class="result-seat">${guest.table}</span>
       `;
       group.appendChild(item);
     });
