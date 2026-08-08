@@ -43,7 +43,7 @@ function render(list) {
     item.className = 'result-item';
     item.innerHTML = `
       <span class="result-name">${guest.name}</span>
-      <span class="result-seat">第 ${guest.table} 桌 &middot; ${guest.seat} 座</span>
+      <span class="result-seat">${guest.table}</span>
     `;
     resultsEl.appendChild(item);
   });
@@ -68,7 +68,7 @@ function renderTablemates(matches) {
 
     const group = document.createElement('div');
     group.className = 'table-group';
-    group.innerHTML = `<p class="table-group-title">${guest.name} 的桌次：第 ${guest.table} 桌</p>`;
+    group.innerHTML = `<p class="table-group-title">您與其他同桌貴賓：</p>`;
 
     tablemates.forEach(mate => {
       const item = document.createElement('div');
@@ -76,7 +76,7 @@ function renderTablemates(matches) {
       item.className = 'result-item' + (isSelf ? ' self' : '');
       item.innerHTML = `
         <span class="result-name">${mate.name}${isSelf ? '（您）' : ''}</span>
-        <span class="result-seat">${mate.seat} 座</span>
+        <span class="result-seat">${mate.seat}${guest.table}</span>
       `;
       group.appendChild(item);
     });
